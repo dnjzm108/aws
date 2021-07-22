@@ -1,0 +1,44 @@
+#Restful API
+
+requesr method type
+
+1.GET : 데이터를 가져올때 (R) select문
+2.POST : 데이터를 입력할때 (C) insert 문
+3. PUT : 데이터를 수정할때 (U) update 문
+4.DELETE : 데이터를 삭제할때 (D) delete 문
+5.PATCH : 데이터를 일부 수정할때 (U) update 문
+6.OPTIONS : 요청을 체크 
+7.HEAD : 데이터를 request message Header만 받아올때  
+
+Restful 너무 너무 세밀하게 많지만
+실제로 개발할때는 정말 쓰는것만 쓴다
+post 로만 써도 구동은 되잖아??
+코드를 직관적으로 볼 수 있게
+
+애매한것들은 post or get 로 작업 ex) 로그인 이나 게사판 view hit...
+
+
+ # Resful API 만들어 보기
+
+ 1. React 로 만든 comment 댓글을 DB와 연결하기 
+ 2.front server 와 back server 가 필요한데 back 은 실서버 구동
+ 3.front 구동하지 않고 있음x
+ 4. 로컬에서 작업을 할거고 DB연결을 하는 것을 완료가 되면
+ 5.restful api 만들기 인데 
+
+ step
+ 1 npm install squelize squelize-cli mysql2
+ 2 npx sequlize init(sequlize 폴더 생성)
+ 3.config /models .sedders 폴더 생성됬는지 확인
+ 4.config 폴더에서 config.json 을 수정 (해당정보에 맞게)
+ 5.models 폴더 안에 comment.js 파일생성 (db모델을 만들기 위해서)
+ 6.models 폴더 안에 index.js 수정
+ 7. server.js 파일에서 sequelize sync
+
+이 작업들은 금방금방 할 줄 알아야 하는 부분이다.
+ #워크스페이스 workspace  #project  
+ #git clone
+ #react -> webpack 셋팅 2~3qns
+ #express hellow world +db 연결
+ #새로운 폴터에서 작업환경 셋팅 다시 할때
+ # back -> front

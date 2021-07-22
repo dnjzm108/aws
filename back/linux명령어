@@ -1,0 +1,94 @@
+ ls : 디렉토리 내용 보기 (현위치)
+ ls -al : 디렉토리 상세하게 보기
+- 10 글자
+x xxx xxx xxx  계정명 계정명
+d rex r-x r-x  계정명 계정명
+
+ pwd : 내 경로 보기
+ cd / :최상위 디렉토리 갑니다.
+
+ cd ~ : 우리가 작업 할 디렉토리
+
+ sudo su // 계정이 ubuntu
+        //계정이 root
+
+    mysql_secure_insrallstion
+
+    set password for 'root'@'localhost' = PASSWORD('root');
+
+select user,host,plugin from user;
+
+|mysql_native_password|
+ 가 아닐경우  
+ UPDATE user SET plugin = 'mysql_native_password'
+update user set password = password('root') where user='root';
+   flush privileges;
+
+   root 계정에서 
+   ctrl + c MYSQL 접속을 끊고 
+   exit  써서 root 계정에서 빠져 나오고
+
+   ubuntu@ip-172-31-22-22 : mysql -uroot -p"password"
+
+   
+
+   ls -al 
+
+   18.118.6.37
+
+   vi server.js
+   i (insert mode)
+   esc
+   shift + : 
+   wq! 
+
+
+
+mysql -uroot    mysql 접속이 가능한지 체크
+
+색깔 초록초록
+계정명@주소 : 디렉토리$ (커서)
+ubuntu@ip-172-31-1-199
+:
+~
+$ 이후에 커서
+
+경로 linux '/'경로 구분
+     window '\' 경로 구분
+
+     ~: home 디렉토리 (계정에대한 디렉토리)
+     ~ -> /home /계정명
+     cd / 치고
+     ubuntu@ip-172-31-1-199:~$ ->  ubuntu@ip-172-31-1-199:/$ 
+     다시 홈 디렉토리로 가는 방법
+     cd/home/ubuntu == cd ~ 같은거
+
+     리눅스는 . 붙으면 숨김파일임!!
+     .env
+     .gitignore
+
+    mac 또한 리눅스 기반이라서 . 붙으면 숨김파일임
+
+    ls -al < 다보여 달라
+    ls 숨김파일 빼고 보여줌.
+
+    rm [옵션] 디렉토리 or 파일명
+        -r : 하위폴더도 삭제
+        -f : 파일권한 상관없이 강제적으로 실행 시킴
+        rm -r ./awsTest
+        rm -rf <-- 경고...
+
+# delete -> /home/ubuntu  ./awsTest
+rm -rf  ./awsTest
+
+
+#서버를 실행시기키 위해서 뭘하나
+node server.js
+
+mysql 접속해서 데이터 베이스 생성
+ ubuntu mysql의 접속 내용을 하기
+ 헷갈리지 않기!!       
+
+ 80번 포트로 바꾸기
+
+ 
