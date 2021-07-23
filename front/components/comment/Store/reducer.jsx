@@ -74,6 +74,7 @@ const reducer = (state,action) => {
             console.log(state.commentItem)
             let newArr = []
             for(let i=0; i<state.commentItem.length; i++){
+                console.log(typeof action.payload);
                 if(i !== action.payload) newArr.push(state.commentItem[i])
             }
             console.log(newArr,state.commentItem)
