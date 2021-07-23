@@ -5,7 +5,7 @@
 export const getComment = async (dispatch) => {
     dispatch({ type: 'GET_COMMENT' })
     try {
-        const response = await fetch('http://3.134.253.62/api/comment')
+        const response = await fetch('http://api.seong-jin.net/api/comment')
         const data = await response.json()
 
         const result = data.map(obj => {
@@ -29,7 +29,7 @@ export const postComment = async (dispatch, body) => {
             },
             body: JSON.stringify(body)
         }
-        const response = await fetch('http://3.134.253.62/api/comment', options)
+        const response = await fetch('http://api.seong-jin.net/api/comment', options)
         const data = await response.json()
         const result = { ...data, date: data.updatedAt.substr(0, 10) }
 
